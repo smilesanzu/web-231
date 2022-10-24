@@ -1,0 +1,43 @@
+html,
+body {
+    font-family: 'Oswald', Verdana, Arial, sans-serif;
+    margin-top: 50px;
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    font-family: 'Oswald', Verdana, Arial, sans-serif;
+    background-color: #3C275A;
+    color: white;
+    border: 1px;
+    border-style: solid;
+    border-color: #d6a800;
+    padding: 10px;
+}
+
+
+/* unvisited link */
+
+a:link {
+    color: #453674;
+    text-decoration: none;
+}
+
+
+/* visited link */
+
+a:visited {
+    color: #3C275A;
+}
+
+
+/* mouse over link */
+
+a:hover {
+    color: #4F3674;
+    background-color: #d6a800;
+}
