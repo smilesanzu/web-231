@@ -1,0 +1,5 @@
+ul.dotted {
+    border-style: dotted none dotted none;
+    color: red;
+    border: 1px;
+}

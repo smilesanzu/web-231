@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Payroll System</title>
+
+    <!-- link to an external stylesheet -->
+    <link rel="stylesheet" type="text/css" href="site.css">
+    <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+
+    <!-- meta tags -->
+    <meta name="description" content="Bellevue University, JavaScript" />
+    <meta name="keywords" content="Assignments, Web Development, Bellevue University" />
+    <meta name="robots" content="nofollow" />
+    <meta name="author" content="Janis Gonzalez" />
+
+</head>
+
+<body>
+    <div class="container">
+        <h1 id="payroll-header">Payroll System</h1>
+        <h3>Employee record 1</h3>
+        <ul class="dotted">
+            <li>
+                <a id="txtFirstNameJohn"></a>
+            </li>
+            <li>
+                <a id="txtLastNameDoe"></a>
+            </li>
+            <li>
+                <a id="txtAddressJohn"></a>
+            </li>
+            <li>
+                <a id="txtHireDateJohn"></a>
+            </li>
+            <li>
+                <a id="txtPayRateJohn"></a>
+            </li>
+        </ul>
+
+        <h1 id="payroll-header">Payroll System</h1>
+        <h3>Employee record 2</h3>
+        <ul class="dotted">
+            <li>
+                <a id="txtFirstNameLeo"></a>
+            </li>
+            <li>
+                <a id="txtLastNameTang"></a>
+            </li>
+            <li>
+                <a id="txtAddressLeo"></a>
+            </li>
+            <li>
+                <a id="txtHireDateLeo"></a>
+            </li>
+            <li>
+                <a id="txtPayRateLeo"></a>
+            </li>
+        </ul>
+
+        <h1 id="payroll-header">Payroll System</h1>
+        <h3>Employee record 3</h3>
+        <ul class="dotted">
+            <li>
+                <a id="txtFirstNameAlex"></a>
+            </li>
+            <li>
+                <a id="txtLastNameLamb"></a>
+            </li>
+            <li>
+                <a id="txtAddressAlex"></a>
+            </li>
+            <li>
+                <a id="txtHireDateAlex"></a>
+            </li>
+            <li>
+                <a id="txtPayRateAlex"></a>
+            </li>
+        </ul>
+
+        <p><a id="return-home" href="index.html">Return</a></p>
+    </div>
+
+    <script>
+        document.getElementById("txtFirstNameJohn").innerHTML = firstNameVariable
+        document.getElementById("txtFirstNameLeo").innerHTML = firstNameVariable
+        document.getElementById("txtFirstNameAlex").innerHTML = firstNameVariable
+        document.getElementById("txtLastNameDoe").innerHTML = lastNameVariable
+        document.getElementById("txtLastNameTang").innerHTML = lastNameVariable
+        document.getElementById("txtLastNameLamb").innerHTML = lastNameVariable
+        document.getElementById("txtAddressJohn").innerHTML = addressVariable
+        document.getElementById("txtAddressLeo").innerHTML = addressVariable
+        document.getElementById("txtAddressAlex").innerHTML = addressVariable
+        document.getElementById("txtHireDateJohn").innerHTML = hireDateVariable
+        document.getElementById("txtHireDateLeo").innerHTML = hireDateVariable
+        document.getElementById("txtHireDateAlex").innerHTML = hireDateVariable
+        document.getElementById("txtPayRateJohn").innerHTML = payRateVariable
+        document.getElementById("txtPayRateLeo").innerHTML = payRateVariable
+        document.getElementById("txtPayRateAlex").innerHTML = payRateVariable
+
+        // variables
+
+        const firstName = 'John'
+        const firstName = 'Leo'
+        const firstName = 'Alex'
+
+        const lastName = 'Doe'
+        const lastName = 'Tang'
+        const lastName = 'Lamb'
+
+        // variables
+        let date = new Date()
+        let now = date.toLocaleDataString()
+        let nowV2 = date.toLocaleDateString('en-US')
+    </script>
+</body>
+
+</html>

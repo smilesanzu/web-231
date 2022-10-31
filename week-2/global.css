@@ -1,0 +1,21 @@
+/* unvisited link */
+
+a:link {
+    color: #4F3674;
+    text-decoration: none;
+}
+
+
+/* visited link */
+
+a:visited {
+    color: #3C275A;
+}
+
+
+/* mouse over link */
+
+a:hover {
+    color: #4F3674;
+    background-color: #d6a800;
+}
