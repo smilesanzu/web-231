@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="global.css">
+</head>
+
+<body>
+
+    <h1 class="app-header">Welcome to the Temperature Conversion App!</h1>
+
+    <div class="card">
+        <h1>Fahrenheit to Celsius Converter</h1>
+        <br>
+        <label for="txtFahrenheit">Fahrenheit value:</label>
+        <input id="outputFahrenheit" type="number" placeholder="Fahrenheit" oninput="temperatureConverterCelsius(this.value)" onchange="temperatureConverterCelsius(this.value)" value="">
+        <button type="button" id="convert" onclick="convertTemp()">Convert Temperature</button>
+    </div>
+
+    <div class="card">
+        <h1>Conversion Results</h1>
+
+        <script type="text/javascript">
+            function temperatureConverterCelsius(valNum) {
+                valNum = parseFloat(valNum);
+                document.getElementById("outputCelsius").value = (valNum - 32) / 1.8;
+
+            }
+        </script>
+    </div>
+    <p><a id="return-home" href="index.html">Return</a></p>
+
+    <!-- onclick alert using W3schools-->
+
+</body>
+
+</html>

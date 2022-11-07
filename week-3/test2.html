@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="Gonzalez-temp-conversion.css" />
+    <link rel="stylesheet" type="text/css" href="/global.css" />
+    <link href="http://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="app-header">Welcome to the Temperature Conversion App!</h1>
+
+        <div class="card">
+            <div class="card-body">Fahrenheit to Celsius Converter</div>
+
+            <label for="txtFahrenheit">Fahrenheit value:</label>
+            <input id="outputFahrenheit" type="number" placeholder="Fahrenheit" oninput="temperatureConverterCelsius(this.value)" onchange="temperatureConverterCelsius(this.value)" value="">
+        </div>
+        <div class="card-body">
+            Conversion Results
+
+            <input id="outputCelsius" type="number" placeholder="Celsius" oninput="temperatureConverterFahrenheit(this.value)" onchange="temperatureConverterFahrenheit(this.value)" value="">
+            </p>
+
+
+            <script type="text/javascript">
+                function temperatureConverterCelsius(valNum) {
+                    valNum = parseFloat(valNum);
+                    document.getElementById("outputCelsius").value = (valNum - 32) / 1.8;
+                    //document.getElementById("outputFahrenheit").value = (valNum*1.8)+32;
+
+                }
+            </script>
+        </div>
+
+</body>
+
+</html>

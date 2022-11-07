@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="Gonzalez-temp-conversion.css" />
+    <link rel="stylesheet" type="text/css" href="/global.css" />
+    <link href="http://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <center>
+        <div id="container">
+            <h1 class="app-header">Welcome to the Temperature Conversion App!</h1>
+
+            <div id="form-example">
+                <div class="card">
+                    <div class="card-title">Fahrenheit to Celsius Converter</div>
+                    <div class="card-content">
+                        <div class="form">
+                            <class="form-field">
+                                <label for="txtFahrenheit">Fahrenheit value</label>
+                                <input type="text" class="input" id="txtFahrenheit" name="txtFahrenheit" />
+
+                                <div class="form-field">
+                                    <button type="button" class="btn btn-primary full-width" id="btnConvert">Convert Temperature</button>
+                                </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+
+        <div id="form-results-example">
+            <div class="card">
+                <div class="card-title">Conversion Results</div>
+                <div class="card-content">
+                    <input id="outputFahrenheit" type="number" placeholder="Fahrenheit" oninput="temperatureConverterCelsius(this.value)" onchange="temperatureConverterCelsius(this.value)" value="">
+                </div>
+            </div>
+        </div>
+    </center>
+    <p><a id="return-home" href="/index.html">Return</a></p>
+
+    <script type="text/javascript">
+        document.getElementById("btnConvert").onclick = function() {
+                const fahrenheit = (value) => (value - 32) * 5 / 9;
+            }
+            // button convert value from fahrenheit
+        function fahrenheitToCelsius(fahrenheit) {
+            console.log((parseFloat(fahrenheit) - 32) * 5 / 9).toFixed(2);
+            const fahrenheit = document.getElementById("txtFahrenheit");
+        }
+        // function from fahrenheit to celsius using formula
+        function temperatureConverterCelsius(valNum) {
+            valNum = parseFloat(valNum);
+            document.getElementById("outputCelsius").value = (valNum - 32) / 1.8;
+        }
+    </script>
+</body>
+
+</html>
