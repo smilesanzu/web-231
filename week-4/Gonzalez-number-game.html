@@ -50,15 +50,21 @@
         var rnd = Math.floor(Math.random() * 10) + 1;
 
         function play() {
+            // alert if number between 1 and 10 not entered
             var myNumber = document.getElementById("txtMyNumber").value;
             if (myNumber < 1 || myNumber > 10) {
                 alert("Enter a number between 1 and 10.");
             } else {
+                // if number guessed is less than the correct answer
                 if (myNumber > rnd) {
                     msg1.textContent = "The number is less than " + myNumber;
-                } else if (myNumber < rnd) {
+                }
+                // if number guessed is greater than the correct answer
+                else if (myNumber < rnd) {
                     msg1.textContent = "The number is greater than " + myNumber;
-                } else if (myNumber == rnd) {
+                }
+                // if number guessed is the correct answer
+                else if (myNumber == rnd) {
                     msg1.textContent = "Congratulations! You picked the correct number! "
                 }
             }
