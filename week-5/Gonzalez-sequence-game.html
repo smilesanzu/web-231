@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="Gonzalez-sequence-game.css" />
+    <link rel="stylesheet" type="text/css" href="/global.css" />
+    <link href="http://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <center>
+        <div id="container">
+            <h1 class="app-header">Welcome to the sequence game!</h1>
+
+            <div id="form-example">
+                <div class="card">
+                    <div class="card-title">Sequence Selection Form</div>
+                    <div class="card-content">
+                        <div class="form">
+                            <class="form-field">
+                                <label for="numberSequence">Choose a number sequence:</label>
+                                <select name="numberSequence" id="numberSequence">
+                                    <option value="select">--Select--</option>
+                                    <option value="fibonacci">Fibonacci Sequence</option>
+                                    <option value="even">Even Numbers</option>
+                                    <option value="odd">Odd Numbers</option>
+                                  </select>
+
+                                <div class="form-field">
+                                    <button onClick="choice()" type="button" class="btn btn-primary full-width" id="btnDisplaySequence">Display Sequence</button>
+                                </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+
+        <div id="form-results-example">
+            <div class="card">
+                <div class="card-title">Sequence Results</div>
+                <div class="card-content">
+                    <p id="message1"></p>
+                    <input type="text" id="txtname" name="txtname" onClick="choice()">
+                </div>
+            </div>
+        </div>
+    </center>
+    <p><a id="return-home" href="/index.html">Return</a></p>
+
+    <script type="text/javascript">
+        // message when choice is submitted
+        var msg1 = document.getElementById("message1")
+
+        // fibonacci sequence 
+        var i;
+        var fib = [0, 1]; // initialize array
+
+        for (i = 2; i <= 40; i++) {
+            // next fibonacci number = previous + one before previous
+            // translated to js:
+            fib[i] = fib[i - 2] + fib[i - 1];
+            console.log(fib[i]);
+        }
+
+        // even numbers generated
+        var even = document.getElementById("even");
+        for (i = 1; i <= 20; i++) {
+            if (i % 2 == 0)
+        }
+
+        // odd numbers generated
+        var odd = document.getElementById("odd");
+        for (i = 1; i <= 20; i++) {
+            if (i % 2 !== 0)
+        }
+
+
+        function choice() {
+            // alert if number between 1 and 10 not entered
+            var choice = document.getElementById("numberSequence").innerHTML;
+            if (numberSequence == select) {
+                alert("Invalid selection, please try again!");
+            } else {
+                // if drop down selection is fibonacci
+                if (numberSequence == fibonacci) {
+                    msg1.textContent = fib;
+                }
+                // if drop down selection is even numbers
+                else if (numberSequence == even) {
+                    msg1.textContent = even;
+                }
+                // if drop down selection is odd numbers
+                else if (numberSequence == odd) {
+                    msg1.textContent = odd
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>
