@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="Gonzalez-sequence-game.css" />
+    <link rel="stylesheet" type="text/css" href="/global.css" />
+    <link href="http://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <center>
+        <div id="container">
+            <h1 class="app-header">Welcome to In-N-Out-Books!</h1>
+
+            <div id="form-example">
+                <div class="card">
+                    <div class="card-title">My Favorites</div>
+                    <div class="card-content">
+                        <div class="form">
+                            <class="form-field">
+                                <label for="myListing">Choose a listing:</label>
+                                <select name="myListing" id="myListing">
+                                    <option value="select">--Select--</option>
+                                    <option value="books">Top 3 Favorite Books</option>
+                                    <option value="authors">Top 3 Favorite Authors</option>
+                                  </select>
+
+                                <div class="form-field">
+                                    <button onClick="choice()" type="button" class="btn btn-primary full-width" id="btnDisplayListing">Display Listing</button>
+                                </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+
+        <div id="form-results-example">
+            <div class="card">
+                <div class="card-title">Results</div>
+                <div class="card-content">
+                    <p id="message1">
+                        <table style="width:100%">
+                            <tr>
+                                <th>ISBN</th>
+                                <th>Title</th>
+                                <th>Pages</th>
+                            </tr>
+                            <tr>
+                                <td id="txtSilmarillionISBN">0618126988</td>
+                                <td id="txtSilmarillionName">The Silmarillion</td>
+                                <td id="txtSilmarillionPages">365</td>
+                            </tr>
+                            <tr>
+                                <td id="txtChocolateFactoryISBN">0141301155</td>
+                                <td id="txtChocolateFactoryName">Charlie and the Chocolate Factory</td>
+                                <td id="txtChocolateFactoryPages">176</td>
+                            </tr>
+                            <tr>
+                                <td id="txtAWrinkleInTimeISBN">0312367546</td>
+                                <td id="txtAWrinkleInTimeName">A Wrinkle in Time</td>
+                                <td id="txtAWrinkleInTimePages">256</td>
+                            </tr>
+                        </table>
+
+
+                        <table style="width:100%">
+                            <tr>
+                                <th>Name</th>
+                                <th>Genre</th>
+                            </tr>
+                            <tr>
+                                <td id="txtTolkienName">J.R.R. Tolkien</td>
+                                <td id="txtTolkienGenre">Fantasy</td>
+                            </tr>
+                            <tr>
+                                <td id="txtDahlName">Roald Dahl</td>
+                                <td id="txtDahlGenre">Fantasy, children's literature</td>
+                            </tr>
+                            <tr>
+                                <td id="txtDazaiName">Osamu Dazai</td>
+                                <td id="txtDazaiGenre">Fiction</td>
+                            </tr>
+                        </table>
+                    </p>
+
+
+                </div>
+            </div>
+        </div>
+    </center>
+    <p><a id="return-home" href="/index.html">Return</a></p>
+
+    <script type="text/javascript">
+        // message when choice is submitted
+        var msg1 = document.getElementById("message1")
+
+        let books = document.getElementById("favorite-books");
+        books.style.display = "none";
+
+        let authors = document.getElementById("favorite-authors");
+        authors.style.display = "none";
+
+        function choice() {
+            // alert if number between 1 and 10 not entered
+            var choice = document.getElementById("myListing").innerHTML;
+            if (myListing == select) {
+                alert("Invalid selection, please try again!");
+            } else {
+                // if drop down selection is books
+                if (myListing == books) {
+                    msg1.textContent = "Top 3 Favorite Books" + books;
+                }
+                // if drop down selection is authors
+                else if (myListing == authors) {
+                    msg1.textContent = "Top 3 Favorite Authors" + authors;
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>
