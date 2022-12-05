@@ -174,6 +174,49 @@
         let employees = document.getElementById("employees");
         authors.style.display = "none";
 
+        // Products class
+        class Products {
+            constructor(id, type) {
+                this.id = id;
+                this.type = type;
+            }
+        }
+
+        // product objects
+        const designandbuild = new Products(9781118008188, "DesignAndBuild")
+        const guide = new Products(9781491952023, "DefinitiveGuide")
+        const patterns = new Products(9781449331818, "Patterns")
+        const express = new Products(9781617292422, "Express")
+        const mongo = new Products(9781492954461, "MongoDB")
+
+        // Services class
+        class Services {
+            constructor(id, type) {
+                this.id = id;
+                this.type = type;
+            }
+        }
+
+        // services objects
+        const website = new Services(100, "Website")
+        const devops = new Services(101, "DevOps")
+        const database = new Services(102, "Database")
+
+        // Employees class
+        class Employees {
+            constructor(id, type) {
+                this.id = id;
+                this.type = type;
+            }
+        }
+
+        // employees objects
+        const beethoven = new Employees(107, "Beethoven")
+        const bach = new Employees(108, "Bach")
+        const mozart = new Employees(109, "Mozart")
+        const brahms = new Employees(110, "Brahms")
+        const haydn = new Employees(111, "Haydn")
+
         function choice() {
             // alert if number between 1 and 10 not entered
             var choice = document.getElementById("myListing").innerHTML;
@@ -181,15 +224,15 @@
                 alert("Invalid selection, please try again!");
             } else {
                 // if drop down selection is products
-                if (myListing == books) {
+                if (myListing == products) {
                     msg1.textContent = "Javazon Products" + products;
                 }
                 // if drop down selection is services
-                else if (myListing == authors) {
+                else if (myListing == services) {
                     msg1.textContent = "Javazon Services" + services;
                 }
                 // if drop down selection is employees
-                else if (myListing == authors) {
+                else if (myListing == employees) {
                     msg1.textContent = "Javazon Employees" + employees;
                 }
             }
