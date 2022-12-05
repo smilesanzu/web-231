@@ -1,0 +1,65 @@
+html,
+body {
+    font-family: 'Oswald', Verdana, Arial, sans-serif;
+    margin-top: 50px;
+    margin: auto;
+    text-align: center;
+    font-size: 28px;
+}
+
+#container {
+    padding: 10px;
+}
+
+#form-example {
+    width: 600px;
+    margin: 3% auto 0;
+}
+
+#form-results-example {
+    width: 600px;
+    margin: 3% auto 0;
+}
+
+
+/* unvisited link */
+
+a:link {
+    color: #4F3674;
+    text-decoration: none;
+}
+
+
+/* visited link */
+
+a:visited {
+    color: #3C275A;
+}
+
+
+/* mouse over link */
+
+a:hover {
+    color: #4F3674;
+    background-color: #d6a800;
+}
+
+body {
+    margin: 0 0 0 30px;
+}
+
+thead th {
+    color: #fff;
+    background-color: #4F3674;
+    padding: 12px 0 0 12px;
+    text-align: left;
+    border-color: #ddd;
+    border-style: solid;
+    border: 1px;
+}
+
+tbody tr:hover {
+    background-color: #D6A800;
+    color: #4F3674;
+    cursor: pointer;
+}

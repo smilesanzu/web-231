@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="Gonzalez-javazon.css" />
+    <link rel="stylesheet" type="text/css" href="/global.css" />
+    <link href="http://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <center>
+        <div id="container">
+            <h1 class="app-header">Welcome to the Javazon App!</h1>
+
+            <div id="form-example">
+                <div class="card">
+                    <div class="card-title">Javazon Selection Form</div>
+                    <div class="card-content">
+                        <div class="form">
+                            <class="form-field">
+                                <label for="myListing">Choose a listing:</label>
+                                <select name="myListing" id="myListing">
+                                    <option value="select">--Select--</option>
+                                    <option value="products">Products</option>
+                                    <option value="services">Services</option>
+                                    <option value="employees">Employees</option>
+                                  </select>
+
+                                <div class="form-field">
+                                    <button onClick="choice()" type="button" class="btn btn-primary full-width" id="btnDisplayListing">Display Listing</button>
+                                </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+
+        <div id="form-results-example">
+            <div class="card">
+                <div class="card-title">Results</div>
+                <div class="card-content">
+                    <p id="message1">
+                        <table style="width:100%">
+                            <tr>
+                                <th>Product ID</th>
+                                <th>Description</th>
+                                <th>Price</th>
+                                <th>Quantity</th>
+                                <th>Total Value</th>
+                            </tr>
+                            <tr>
+                                <td id="txtProductIDDesignAndBuild">9781118008188</td>
+                                <td id="txtDescriptionDesignAndBuild">HTML and CSS: Design and Build Websites</td>
+                                <td id="txtPriceDesignAndBuild">22.26</td>
+                                <td id="txtQuantityDesignAndBuild">10</td>
+                                <td id="txtTotalValueDesignAndBuild">222.60</td>
+                            </tr>
+                            <tr>
+                                <td id="txtProductIDDefinitiveGuide">9781491952023</td>
+                                <td id="txtDescriptionDefinitiveGuide">JavaScript: The Definitive Guide 7/E</td>
+                                <td id="txtPriceDefinitiveGuide">41.33</td>
+                                <td id="txtQuantityDefinitiveGuide">7</td>
+                                <td id="txtTotalValueDefinitiveGuide">289.31</td>
+                            </tr>
+                            <tr>
+                                <td id="txtProductIDPatterns">9781449331818</td>
+                                <td id="txtDescriptionPatterns">Learning JavaScript Design Patterns 1/E</td>
+                                <td id="txtPricePatterns">25.99</td>
+                                <td id="txtQuantityPatterns">3</td>
+                                <td id="txtTotalValuePatterns">77.97</td>
+                            </tr>
+                            <tr>
+                                <td id="txtProductIDExpress">9781617292422</td>
+                                <td id="txtDescriptionExpress">Express in Action: Writing, building, and testing Node.js applications 1/E</td>
+                                <td id="txtPriceExpress">34.91</td>
+                                <td id="txtQuantityExpress">3</td>
+                                <td id="txtTotalValueExpress">104.73</td>
+                            </tr>
+                            <tr>
+                                <td id="txtProductIDMongoDB">9781492954461</td>
+                                <td id="txtDescriptionMongoDB">MongoDB The Definitive Guide</td>
+                                <td id="txtPriceMongoDB">33.70</td>
+                                <td id="txtQuantityMongoDB">8</td>
+                                <td id="txtTotalValueMongoDB">269.60</td>
+                            </tr>
+                        </table>
+
+
+                        <table style="width:100%">
+                            <tr>
+                                <th>Service ID</th>
+                                <th>Description</th>
+                                <th>Hourly Rate</th>
+                                <th>Minimum Billable hours</th>
+                            </tr>
+                            <tr>
+                                <td id="txtServiceIDWebsite">100</td>
+                                <td id="txtDescriptionWebsite">Website</td>
+                                <td id="txtRateWebsite">150.00</td>
+                                <td id="txtHoursWebsite">25</td>
+                            </tr>
+                            <tr>
+                                <td id="txtServiceIDDevOps">101</td>
+                                <td id="txtDescriptionDevOps">DevOps Consulting</td>
+                                <td id="txtRateDevOps">125.00</td>
+                                <td id="txtHoursDevOps">50</td>
+                            </tr>
+                            <tr>
+                                <td id="txtServiceIDDatabase">102</td>
+                                <td id="txtDescriptionDatabase">Database Consulting</td>
+                                <td id="txtRateDatabase">125.00</td>
+                                <td id="txtHoursDatabase">15</td>
+                            </tr>
+                        </table>
+
+                        <table style="width:100%">
+                            <tr>
+                                <th>Employee ID</th>
+                                <th>Last Name</th>
+                                <th>First Name</th>
+                                <th>Salary</th>
+                            </tr>
+                            <tr>
+                                <td id="txtEmployeeIDBeethoven">1007</td>
+                                <td id="txtLastNameBeethoven">Beethoven</td>
+                                <td id="txtFirstNameBeethoven">Ludwig</td>
+                                <td id="txtSalaryBeethoven">13.99</td>
+                            </tr>
+                            <tr>
+                                <td id="txtEmployeeIDBach">1008</td>
+                                <td id="txtLastNameBach">Bach</td>
+                                <td id="txtFirstNameBach">Johann</td>
+                                <td id="txtSalaryBach">22.30</td>
+                            </tr>
+                            <tr>
+                                <td id="txtEmployeeIDMozart">1009</td>
+                                <td id="txtLastNameMozart">Mozart</td>
+                                <td id="txtFirstNameMozart">Wolfgang</td>
+                                <td id="txtSalaryMozart">19.50</td>
+                            </tr>
+                            <tr>
+                                <td id="txtEmployeeIDBrahms">1010</td>
+                                <td id="txtLastNameBrahms">Brahms</td>
+                                <td id="txtFirstNameBrahms">Johannes</td>
+                                <td id="txtSalaryBrahms">12.00</td>
+                            </tr>
+                            <tr>
+                                <td id="txtEmployeeIDHaydn">1011</td>
+                                <td id="txtLastNameHaydn">Haydn</td>
+                                <td id="txtFirstNameHaydn">Joseph</td>
+                                <td id="txtSalaryHaydn">32.50</td>
+                            </tr>
+                        </table>
+                    </p>
+
+
+                </div>
+            </div>
+        </div>
+    </center>
+    <p><a id="return-home" href="/index.html">Return</a></p>
+
+    <script type="text/javascript">
+        // message when choice is submitted
+        var msg1 = document.getElementById("message1")
+
+        let products = document.getElementById("products");
+        books.style.display = "none";
+
+        let services = document.getElementById("services");
+        authors.style.display = "none";
+
+        let employees = document.getElementById("employees");
+        authors.style.display = "none";
+
+        function choice() {
+            // alert if number between 1 and 10 not entered
+            var choice = document.getElementById("myListing").innerHTML;
+            if (myListing == select) {
+                alert("Invalid selection, please try again!");
+            } else {
+                // if drop down selection is products
+                if (myListing == books) {
+                    msg1.textContent = "Javazon Products" + products;
+                }
+                // if drop down selection is services
+                else if (myListing == authors) {
+                    msg1.textContent = "Javazon Services" + services;
+                }
+                // if drop down selection is employees
+                else if (myListing == authors) {
+                    msg1.textContent = "Javazon Employees" + employees;
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>
