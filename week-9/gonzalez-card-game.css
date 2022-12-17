@@ -1,0 +1,23 @@
+/**
+     Title: Assignment 9.2 gonzalez-card-game.css
+     Author: Janis Gonzalez
+     Date: 16 December 2022
+     Description: Styling for the gonzalez-card-game.html file
+*/
+
+
+/**Makes elements and text center*/
+
+.player-card {
+    text-align: center;
+}
+
+
+/**Makes the cards that are shuffled placed into evenly spaced columns*/
+
+#shuffledCards {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    padding: 10px;
+    grid-gap: 10px;
+}
